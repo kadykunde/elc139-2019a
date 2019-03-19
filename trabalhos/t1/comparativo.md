@@ -3,7 +3,7 @@
 TOP500 & me: Comparativo de Arquiteturas Paralelas
 --------------------------------------------------
 
-Nome: < preencha seu nome aqui >
+Nome: Ricardo Kunde Schlesner
 
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
