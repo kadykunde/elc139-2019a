@@ -8,15 +8,15 @@ Nome: < preencha seu nome aqui >
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
 | Nome/Título                                               |    HPC4 - Proliant DL380 Gen10    |      Ricardo       |
-| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://static.toiimg.com/photo/64973476.cms" width="48"> | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="48">|
-| Classificação de Flynn                                    |                       |                 |
-| Memória: compartilhada, distribuída ou ambas?             |                       |                 |
-| Número total de núcleos de processamento                  |                       |                 |
-| Fabricante e modelo do(s) processador(es)                 |                       |                 |
-| Frequência do(s) processador(es)                          |                       |                 |
-| Memória total                                             |                       |                 |
-| Tipo(s) de interconexão entre os núcleos/processadores    |                       |                 |
-| Desempenho Linpack                                        |                       |                 |
+| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://static.toiimg.com/photo/64973476.cms" width="128"> | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="128">|
+| Classificação de Flynn                                    |          MIMD             |       MIMD          |
+| Memória: compartilhada, distribuída ou ambas?             |           ambas            |         ambas        |
+| Número total de núcleos de processamento                  |            253,600         |        4         |
+| Fabricante e modelo do(s) processador(es)                 |       Xeon Platinum 8160     |       Intel Core i5-4670k          |
+| Frequência do(s) processador(es)                          |            2.1GHz           |         3.4 GHz        |
+| Memória total                                             |           304,320 GB            |        16 GB         |
+| Tipo(s) de interconexão entre os núcleos/processadores    |   Mellanox InfiniBand EDR     |      Quick Patch Interconnect   |
+| Desempenho Linpack                                        |          12,210 TFlops             |         142.53 GFlops       |
 
 ### Referências
 - Autor (nome de pessoa ou instituição). Título. URL.
