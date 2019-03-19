@@ -8,7 +8,7 @@ Nome: < preencha seu nome aqui >
 | Característica                                            | Computador no TOP500  | Meu computador  |
 | --------------------------------------------------------- | --------------------- | --------------- |
 | Nome/Título                                               |    HPC4 - Proliant DL380 Gen10    |      Ricardo       |
-| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://static.toiimg.com/photo/64973476.cms" width="128"> | Substitua-me. <img src="http://www.top500.org/static//images/Top500_logo.png" width="128">|
+| Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://static.toiimg.com/photo/64973476.cms" width="164"> | <img src="https://images-na.ssl-images-amazon.com/images/I/518pvtz8oJL.jpg" width="164">|
 | Classificação de Flynn                                    |          MIMD             |       MIMD          |
 | Memória: compartilhada, distribuída ou ambas?             |           ambas            |         ambas        |
 | Número total de núcleos de processamento                  |            253,600         |        4         |
