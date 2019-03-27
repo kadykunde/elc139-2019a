@@ -10,7 +10,8 @@ Questões:
 	Particionamento:
 	O particionamento é feito na função dotprod_threads, onde são configuradas e criadas threads baseado nos parametros passados como argumentos.
 	
-	```threads = (pthread_t *) malloc(nthreads * sizeof(pthread_t));
+	``
+	threads = (pthread_t *) malloc(nthreads * sizeof(pthread_t));
 	pthread_mutex_init(&mutexsum, NULL);
 
 	pthread_attr_init(&attr);
@@ -19,7 +20,7 @@ Questões:
 	for (i = 0; i < nthreads; i++) {
 	  pthread_create(&threads[i], &attr, dotprod_worker, (void *) i);
 	}
-	```
+	``
 	
 	Comunicação:
 	
