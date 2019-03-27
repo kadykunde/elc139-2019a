@@ -2,11 +2,11 @@
 
 Nome: Ricardo Kunde Schlesner
 
-###Parte 1 - PThreads:
+### Parte 1 - PThreads:
 
 Questões:
 
-####1 - 
+#### 1 - 
 
 Particionamento:
 O particionamento é onde a tarefa é dividida para ser executada em varias threads, o que é calculado nas seguintes linhas:
@@ -61,13 +61,34 @@ Enquanto que o código de particionamento determina as tarefas de cada thread, o
 	}
 ```
 
-####2 - 
+#### 2 - 
 
 Em média (de 10 rodadas de cada configuração), a configuração de 1 thread demorou 5869357 usec, enquanto que a de 2 threads demorou 2949172 usec.
 Calculando-se 5869357/2949172 temos 1.9901, concluíndo-se que a configuração de 2 threads tem aproximadamente 199% a velocidade da de 1 thread.
 
-####3 -
+#### 3 -
 
+Analisando os valores demonstrados nas tabelas representadas abaixo na questão número 4, pode-se ver que de 1 para 2 threads se tem o desempenho dobrado, enquanto que de 2 threads para 4 é um aumento de aproximadamente 50%, o que já mostra uma desaceleração.
+A mudança de carga tem um efeito bem linear, e as threads continuaram tendo desempenho similar.
+Trocar o tamanho de carga e o número de repetições teve resultados proporcionais, o que faz sentido ao se fazer análise do código, já que são 2 for loops.
+
+#### 4 -
+
+Carga total de 1000000:
+
+| tool     | nthreads | size    | repetitions | usec    | 
+|----------|----------|---------|-------------|---------| 
+| Pthreads | 1        | 1000000 | 2000        | 6038125 | 
+| Pthreads | 2        | 500000  | 2000        | 3053475 | 
+| Pthreads | 4        | 250000  | 2000        | 1999010 | 
+
+Carga total de 10000:
+
+| tool     | nthreads | size    | repetitions | usec    | 
+|----------|----------|---------|-------------|---------| 
+| Pthreads | 1        | 10000   | 2000        | 58132   | 
+| Pthreads | 2        | 5000    | 2000        | 29985   | 
+| Pthreads | 4        | 2500    | 2000        | 20544   | 
 
 
 ### Referências
