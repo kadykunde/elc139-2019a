@@ -2,13 +2,14 @@
 
 Nome: Ricardo Kunde Schlesner
 
-Parte 1 - PThreads:
+###Parte 1 - PThreads:
 
 Questões:
 
-1 - 
-	Particionamento:
-	O particionamento é onde a tarefa é dividida para ser executada em varias threads, o que é calculado nas seguintes linhas:
+####1 - 
+
+Particionamento:
+O particionamento é onde a tarefa é dividida para ser executada em varias threads, o que é calculado nas seguintes linhas:
 	
 Aqui se cria vetores (e os preence) baseado na quantia de trabalho e número de threads especificadas nos argumentos do programa.
 	
@@ -59,6 +60,15 @@ Enquanto que o código de particionamento determina as tarefas de cada thread, o
 		pthread_create(&threads[i], &attr, dotprod_worker, (void *) i);
 	}
 ```
+
+####2 - 
+
+Em média (de 10 rodadas de cada configuração), a configuração de 1 thread demorou 5869357 usec, enquanto que a de 2 threads demorou 2949172 usec.
+Calculando-se 5869357/2949172 temos 1.9901, concluíndo-se que a configuração de 2 threads tem aproximadamente 199% a velocidade da de 1 thread.
+
+####3 -
+
+
 
 ### Referências
 -
