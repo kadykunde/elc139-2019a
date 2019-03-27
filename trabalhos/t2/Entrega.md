@@ -81,20 +81,33 @@ Trocar o tamanho de carga e o número de repetições teve resultados proporcion
 
 Carga total de 1000000:
 
-| tool     | nthreads | size    | repetitions | usec    | 
-|----------|----------|---------|-------------|---------| 
-| Pthreads | 1        | 1000000 | 2000        | 6038125 | 
-| Pthreads | 2        | 500000  | 2000        | 3053475 | 
-| Pthreads | 4        | 250000  | 2000        | 1999010 | 
+| tool     | nthreads | size    | repetitions | usec    | speedup | 
+|----------|----------|---------|-------------|---------|---------| 
+| Pthreads | 1        | 1000000 | 2000        | 6038125 | 1       |
+| Pthreads | 2        | 500000  | 2000        | 3053475 | 1.977   |
+| Pthreads | 4        | 250000  | 2000        | 1999010 | 1.527   |
 
 Carga total de 10000:
 
-| tool     | nthreads | size    | repetitions | usec    | 
-|----------|----------|---------|-------------|---------| 
-| Pthreads | 1        | 10000   | 2000        | 58132   | 
-| Pthreads | 2        | 5000    | 2000        | 29985   | 
-| Pthreads | 4        | 2500    | 2000        | 20544   | 
+| tool     | nthreads | size    | repetitions | usec    | speedup | 
+|----------|----------|---------|-------------|---------|---------|
+| Pthreads | 1        | 10000   | 2000        | 58932   | 1       |
+| Pthreads | 2        | 5000    | 2000        | 29985   | 1.965   |
+| Pthreads | 4        | 2500    | 2000        | 20544   | 1.459   |
 
+#### 5 -
+
+A diferença está nas seguintes linhas:
+
+```
+	pthread_mutex_lock (&mutexsum);
+	dotdata.c += mysum;
+	pthread_mutex_unlock (&mutexsum);
+```
+
+Onde na segunda versão se mantém apenas a segunda linha.
+
+Essa mudança abre uma brecha para erros que podem ocorrer quando 2 threads tentam realizar a operação de soma no mesmo instante sobre a memória compartilhada, causando uma das operações a ser sobrescrita.
 
 ### Referências
 -
