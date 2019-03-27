@@ -27,10 +27,39 @@ E aqui, na função dotproduct_worker, é calculado o ponto inicial e final daqu
 ```
 
 	
-	Comunicação:
-	
+Comunicação:
+Onde uma thread se comunica com a outra para fazer qualquer tipo de sincronização necessario para o processo, nesse caso foi utilizado um join na função dotprod_threads:
+
+```
+	for (i = 0; i < nthreads; i++) {
+		pthread_join(threads[i], NULL);
+	}
+```
+
+Aglomeração:
+As threads realizam cálculos em dados diferentes para chegar em apenas um resultado, e isso é realizado com uma estrutura global que todas as threads podem acessar atravez de um mutex (para não ocorrer problemas de duplo acesso):
+
+```
+	pthread_mutex_lock (&mutexsum);
+	dotdata.c += mysum;
+	pthread_mutex_unlock (&mutexsum);
+```
+
+Mapeamento:
+Enquanto que o código de particionamento determina as tarefas de cada thread, o mapeamento é a criação e parametrização dessas, realizadas pelo seguinte código:
+
+```
+	threads = (pthread_t *) malloc(nthreads * sizeof(pthread_t));
+	pthread_mutex_init(&mutexsum, NULL);
+
+	pthread_attr_init(&attr);
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+
+	for (i = 0; i < nthreads; i++) {
+		pthread_create(&threads[i], &attr, dotprod_worker, (void *) i);
+	}
+```
 
 ### Referências
-- Top500. HPC4 - Proliant DL380 Gen10. https://www.top500.org/system/179444
-- Intel. LINPACK Benchmark. https://software.intel.com/en-us/articles/intel-linpack-benchmark-download-license-agreement
+-
 
