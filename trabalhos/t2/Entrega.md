@@ -9,6 +9,7 @@ Questões:
 #### 1 - 
 
 Particionamento:
+
 O particionamento é onde a tarefa é dividida para ser executada em varias threads, o que é calculado nas seguintes linhas:
 	
 Aqui se cria vetores (e os preence) baseado na quantia de trabalho e número de threads especificadas nos argumentos do programa.
@@ -29,6 +30,7 @@ E aqui, na função dotproduct_worker, é calculado o ponto inicial e final daqu
 
 	
 Comunicação:
+
 Onde uma thread se comunica com a outra para fazer qualquer tipo de sincronização necessario para o processo, nesse caso foi utilizado um join na função dotprod_threads:
 
 ```
@@ -38,6 +40,7 @@ Onde uma thread se comunica com a outra para fazer qualquer tipo de sincronizaç
 ```
 
 Aglomeração:
+
 As threads realizam cálculos em dados diferentes para chegar em apenas um resultado, e isso é realizado com uma estrutura global que todas as threads podem acessar atravez de um mutex (para não ocorrer problemas de duplo acesso):
 
 ```
@@ -47,6 +50,7 @@ As threads realizam cálculos em dados diferentes para chegar em apenas um resul
 ```
 
 Mapeamento:
+
 Enquanto que o código de particionamento determina as tarefas de cada thread, o mapeamento é a criação e parametrização dessas, realizadas pelo seguinte código:
 
 ```
@@ -69,6 +73,7 @@ Calculando-se 5869357/2949172 temos 1.9901, concluíndo-se que a configuração 
 #### 3 -
 
 Analisando os valores demonstrados nas tabelas representadas abaixo na questão número 4, pode-se ver que de 1 para 2 threads se tem o desempenho dobrado, enquanto que de 2 threads para 4 é um aumento de aproximadamente 50%, o que já mostra uma desaceleração.
+
 A mudança de carga tem um efeito bem linear, e as threads continuaram tendo desempenho similar.
 Trocar o tamanho de carga e o número de repetições teve resultados proporcionais, o que faz sentido ao se fazer análise do código, já que são 2 for loops.
 
