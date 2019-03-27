@@ -23,6 +23,7 @@ Questões:
 		int start = offset*wsize;
 		int end = start + wsize;
 	```
+
 	
 	Comunicação:
 	
