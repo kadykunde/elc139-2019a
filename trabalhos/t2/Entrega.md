@@ -10,7 +10,7 @@ Questões:
 	Particionamento:
 	O particionamento é onde a tarefa é dividida para ser executada em varias threads, o que é calculado nas seguintes linhas:
 	
-	Aqui se cria vetores (e os preence) baseado na quantia de trabalho e número de threads especificadas nos argumentos do programa.
+Aqui se cria vetores (e os preence) baseado na quantia de trabalho e número de threads especificadas nos argumentos do programa.
 	
 ```
 	dotdata.a = (double *) malloc(wsize*nthreads*sizeof(double));
@@ -19,7 +19,7 @@ Questões:
 	fill(dotdata.b, wsize*nthreads, 1.0);
 ```
 	
-	E aqui, na função dotproduct_worker, é calculado o ponto inicial e final daquela thread, baseado em um offset que muda linearmente entre as threads.
+E aqui, na função dotproduct_worker, é calculado o ponto inicial e final daquela thread, baseado em um offset que muda linearmente entre as threads.
 	
 ```
 	int start = offset*wsize;
