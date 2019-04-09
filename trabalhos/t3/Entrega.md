@@ -38,5 +38,5 @@ A=19 B=20 C=19
 
 ### Referências
 - jakascorner - OpenMP: For & Scheduling http://jakascorner.com/blog/2016/06/omp-for-scheduling.html
-- http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-loop.html
+- OpenMP topic: Loop parallelism - http://pages.tacc.utexas.edu/~eijkhout/pcse/html/omp-loop.html
 
