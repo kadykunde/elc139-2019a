@@ -76,31 +76,32 @@ public:
 				break;
 			}
 			case 3: {
-#pragma omp parallel for schedule(dynamic)
-				for (int i = 0; i < nTimes; i++) {
-					array->addChar('A' + omp_get_thread_num());
-				}
-				break;
-			}
-			case 4: {
 #pragma omp parallel for schedule(dynamic, chunkSize)
 				for (int i = 0; i < nTimes; i++) {
 					array->addChar('A' + omp_get_thread_num());
 				}
 				break;
 			}
+			case 4: {
+#pragma omp parallel for schedule(dynamic)
+				for (int i = 0; i < nTimes; i++) {
+					array->addChar('A' + omp_get_thread_num());
+				}
+				break;
+			}
 			case 5: {
-#pragma omp parallel for schedule(guided)
+#pragma omp parallel for schedule(guided, chunkSize)
 				for (int i = 0; i < nTimes; i++) {
 					array->addChar('A' + omp_get_thread_num());
 				}
 				break;
 			}
 			case 6: {
-#pragma omp parallel for schedule(guided, chunkSize)
+#pragma omp parallel for schedule(guided)
 				for (int i = 0; i < nTimes; i++) {
 					array->addChar('A' + omp_get_thread_num());
 				}
+				break;
 			}
 			case 7: {
 #pragma omp parallel for schedule(runtime)
@@ -121,7 +122,6 @@ public:
 				for (int i = 0; i < nTimes; i++) {
 					array->addCharNoMutex('A' + omp_get_thread_num());
 				}
-				break;
 			}
 		}
 		/*std::thread t[nThreads];
@@ -191,4 +191,6 @@ int main() {
 	ArrayFiller m9(9);
 	m9.fillArrayConcurrently();
 	m9.printStats();
+
+	return 0;
 }
