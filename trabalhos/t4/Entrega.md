@@ -2,11 +2,15 @@
 
 Nome: Ricardo Kunde Schlesner
 
-Os testes foram feitos em uma maquina virutual com 4 cores.
+## [Programa 1](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar1.cpp)
+## [Programa 2](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar2.cpp)
+
+### [SLIDES (link google slides)](https://docs.google.com/presentation/d/12o3TLfig8YaOCGtZA9ZDuOd5XQ4EqBn1ItFaJaYqy7Y/edit?usp=sharing)
 
 ### Resultados
 
 A seguinte estão os resultados que encontrei, existe uma explicação mais detalhada nos slides.
+Os testes foram feitos em uma maquina virutual com 4 cores.
 
 ## Sequencial
 
@@ -50,5 +54,5 @@ A seguinte estão os resultados que encontrei, existe uma explicação mais deta
 
 
 ### Referências
--
+- National Instruments - OpenMP Internal Control Variables and Environment Variables - http://zone.ni.com/reference/en-XX/help/370051Y-01/cvi/libref/openmpenvironmentvariables/
 
