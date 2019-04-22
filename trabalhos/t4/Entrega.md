@@ -12,13 +12,17 @@ Nome: Ricardo Kunde Schlesner
 | 1        | 1024    | 32        | 35.8387 |
 | 1        | 1024    | 64        | 68.7447 |
 
-Carga total de 10000:
+Analisando os valores sequenciais, pode-se ver que aumentar a quantia de frames faz o tempo de processamento crescer de forma aproximadamente relativa (com um pouco de vantagem para quantias maiores de frames) enquanto que o tamanho tem efeito dobrado no tempo, o que faz sentido considerando que a imagem é quadrada, quando eu dobro a resolução de uma imagem, a quantia de pixeis quadriplica.
 
-| tool     | nthreads | size    | repetitions | usec    | speedup | 
-|----------|----------|---------|-------------|---------|---------|
-| Pthreads | 1        | 10000   | 2000        | 58932   | 1       |
-| Pthreads | 2        | 5000    | 2000        | 29985   | 1.965   |
-| Pthreads | 4        | 2500    | 2000        | 20544   | 1.459   |
+### Sequencial
+
+| nthreads | size    | frames    | sec     | speedup | 
+|----------|---------|-----------|---------|---------|
+| 1        | 512     | 32        | 9.0630  | 1       |
+| 1        | 512     | 64        | 17.1561 | 1       |
+| 1        | 1024    | 32        | 35.8387 | 1       |
+| 1        | 1024    | 64        | 68.7447 | 1       |
+
 
 ### Referências
 -
