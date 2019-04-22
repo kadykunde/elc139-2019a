@@ -1,18 +1,18 @@
 [Programação Paralela](https://github.com/AndreaInfUFSM/elc139-2018a) > T4
 
-Nome: Ricardo Kunde Schlesner
+### Nome: Ricardo Kunde Schlesner
 
-## [Programa 1](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar1.cpp)
-## [Programa 2](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar2.cpp)
+### [Programa 1](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar1.cpp)
+### [Programa 2](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t4/fractalpar2.cpp)
 
 ### [SLIDES (link google slides)](https://docs.google.com/presentation/d/12o3TLfig8YaOCGtZA9ZDuOd5XQ4EqBn1ItFaJaYqy7Y/edit?usp=sharing)
 
-### Resultados
+## Resultados
 
 A seguinte estão os resultados que encontrei, existe uma explicação mais detalhada nos slides.
 Os testes foram feitos em uma maquina virutual com 4 cores.
 
-## Sequencial
+### Sequencial
 
 | nthreads | size    | frames    | sec     |
 |----------|---------|-----------|---------|
@@ -23,7 +23,7 @@ Os testes foram feitos em uma maquina virutual com 4 cores.
 | 1        | 512     | 128       | 37.0565 |
 
 
-## Paralelo 1
+### Paralelo 1
 
 | nthreads | size    | frames    | sec     | speedup | 
 |----------|---------|-----------|---------|---------|
