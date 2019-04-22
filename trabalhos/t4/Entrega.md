@@ -1,10 +1,14 @@
-[Programação Paralela](https://github.com/AndreaInfUFSM/elc139-2018a) > T2
+[Programação Paralela](https://github.com/AndreaInfUFSM/elc139-2018a) > T4
 
 Nome: Ricardo Kunde Schlesner
 
 Os testes foram feitos em uma maquina virutual com 4 cores.
 
-### Sequencial
+### Resultados
+
+A seguinte estão os resultados que encontrei, existe uma explicação mais detalhada nos slides.
+
+## Sequencial
 
 | nthreads | size    | frames    | sec     |
 |----------|---------|-----------|---------|
@@ -14,9 +18,8 @@ Os testes foram feitos em uma maquina virutual com 4 cores.
 | 1        | 1024    | 64        | 68.7447 |
 | 1        | 512     | 128       | 37.0565 |
 
-Analisando os valores sequenciais, pode-se ver que aumentar a quantia de frames faz o tempo de processamento crescer de forma aproximadamente relativa (com um pouco de vantagem para quantias maiores de frames) enquanto que o tamanho tem efeito dobrado no tempo, o que faz sentido considerando que a imagem é quadrada, quando eu dobro a resolução de uma imagem, a quantia de pixeis quadriplica.
 
-### Paralelo 1
+## Paralelo 1
 
 | nthreads | size    | frames    | sec     | speedup | 
 |----------|---------|-----------|---------|---------|
@@ -30,9 +33,8 @@ Analisando os valores sequenciais, pode-se ver que aumentar a quantia de frames 
 | 8        | 1024    | 64        | 20.5846 | 3.3396  |
 | 8        | 512     | 128       | 11.8271 | 3.1332  |
 
-Já que estou usando um processador com 4 cores, teve um grande ganho de desempenho até 4 threads, porém aumentar após disso acabou tendo efeito contrário, eu imagino que seja por que não tem mais para onde se dividir as tarefas, então apenas acaba se perdendo tempo com escalonamento.
 
-### Paralelo 2
+## Paralelo 2
 
 | nthreads | size    | frames    | sec     | speedup | 
 |----------|---------|-----------|---------|---------|
