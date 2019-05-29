@@ -29,7 +29,9 @@ float compute_avg(float *array, int num_elements) {
 }
 
 int main(int argc, char** argv) {
-  if (argc != 2) {
+  printf("AAAAAAAAAAAA\n");
+  printf("argumentos: %d\n", argc);
+  if (argc != 4) {
     fprintf(stderr, "Usage: avg num_elements_per_proc\n");
     exit(1);
   }
