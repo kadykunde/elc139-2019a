@@ -37,8 +37,18 @@ Os testes abaixo foram feitos com 500 posições(vetor) e 16 processos, variando
 |125	    |50       |2.3459 |
 |250	    |50	      |10.2792|
 
+Para esse programa, a latência parece que adiciona um valor estático, enquanto que a largura de banda é multiplicativa.
 
+Agora vou variar o número de posições e manter wb em 125 Mbps e lat em 5 ums.
 
+|vetor|t(ms)  |
+|-----|-------|
+|100  |0.4395 |
+|500  |2.0196	|
+|100  |4.0017	|
+|3000 |11.9264|
+
+Varia o vetor teve impacto multiplicativo no tempo de execução.
 
 ### Referências
 - 
