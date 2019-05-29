@@ -5,6 +5,7 @@
 ### Parte 1
 
 [sr_bcast](https://github.com/AndreaInfUFSM/elc139-2018a)
+
 |np |t(ms)  |
 |---|-------|
 |8	|0.6967 |
@@ -12,6 +13,7 @@
 |32	|1.2824	|
 
 [mpi_bcast](https://github.com/AndreaInfUFSM/elc139-2018a)
+
 |np |t(ms)  |
 |---|-------|
 |8	|0.7351 |
