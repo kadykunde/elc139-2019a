@@ -24,6 +24,21 @@ Analisando os resultados se conclui que para este caso, o send recieve foi um po
 
 ### Parte 2
 
+[avg](https://github.com/kadykunde/elc139-2019a/blob/master/trabalhos/t7/avg.c)
+
+Os testes abaixo foram feitos com 500 posições(vetor) e 16 processos, variando a latência e a largura da banda.
+
+|bw(Mbps) |lat(ums) |t(ms)  |
+|---------|---------|-------| 
+|125	    |5        |2.0196 |
+|25	      |5        |9.9529 |
+|250	    |5	      |1.0279 |
+|125	    |10       |2.0558 |
+|125	    |50       |2.3459 |
+|250	    |50	      |10.2792|
+
+
+
 
 ### Referências
 - 
