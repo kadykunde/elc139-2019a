@@ -14,7 +14,7 @@ Estamos utilizando CUDA, e isso nos da acesso a um alto número de threads,entã
 
 A seguir segue graficos com o tempo de execução e speedup para diferentes quantias de frames, para um cubo 100x100x100.
 
-<img src="https://cdn.discordapp.com/attachments/434506399200837633/598687210677469209/Sequencial_x_Cuda.png" width="400">
+<img src="https://cdn.discordapp.com/attachments/434506399200837633/598687210677469209/Sequencial_x_Cuda.png" width="600">
 
 
-<img src="https://cdn.discordapp.com/attachments/434506399200837633/598687884710510592/Frames_e_Speedup.png" width="400">
+<img src="https://cdn.discordapp.com/attachments/434506399200837633/598687884710510592/Frames_e_Speedup.png" width="600">
